@@ -30,7 +30,8 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup />
         <SidebarMenu>
-          <ItemLink isActive href="/" text="Dashboard" Icon={Gauge} />
+          <ItemLink isActive href="/dashboard" text="Dashboard" Icon={Gauge} />
+          <ItemLink href="/dashboard/email" text="Email" Icon={Gauge} />
         </SidebarMenu>
         <SidebarGroup />
       </SidebarContent>
