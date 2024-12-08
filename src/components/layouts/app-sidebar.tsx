@@ -149,6 +149,15 @@ const SubscriptionItemLink = ({
               Membership Details
             </Link>
           </SidebarMenuItem>
+          <SidebarMenuItem>
+            <Link
+              href="/dashboard/Advertisements"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+            >
+              Advertisements
+            </Link>
+          </SidebarMenuItem>
+          
         </div>
       )}
     </SidebarMenuItem>
