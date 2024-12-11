@@ -45,7 +45,7 @@ const OverviewCard = () => {
               <p className="text-2xl font-bold">{card.value}</p>
             </div>
             <div>
-              <div className="rounded-full p-2 border border-orange-300 text-orange-400">
+              <div className="rounded-full p-2 border border-primary text-primary">
                 {card.icon}
               </div>
             </div>

@@ -77,5 +77,5 @@ export default {
   		'4xl': '1736px'
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
 } satisfies Config;
