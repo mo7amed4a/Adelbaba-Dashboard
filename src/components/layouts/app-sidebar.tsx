@@ -57,7 +57,7 @@ export function AppSidebar() {
         <SidebarMenu>
           <ItemLink href="/dashboard" text="Dashboard" Icon={Gauge} />
           <ItemLink
-            href="/dashboard/Manegment"
+            href="/dashboard/manegment"
             text="Management"
             Icon={Gauge}
           />
