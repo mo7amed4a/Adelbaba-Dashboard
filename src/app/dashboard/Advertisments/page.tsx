@@ -18,7 +18,6 @@ import {
   Legend,
 } from "chart.js";
 
-import Pie  from "@/components/Pie Chart - Donut with-Text"
 
 
 ChartJS.register(
@@ -90,7 +89,7 @@ function Advertisements() {
       <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888]" />
     </div>
     <Link href='/dashboard/Management/add'>
-              <button className="w-full sm:w-[136px] h-[40px] bg-[#f3b852] rounded-2xl text-white font-bold flex justify-center items-center">
+              <button className="w-full sm:w-[136px] h-[40px] bg-primary rounded-2xl text-white font-bold flex justify-center items-center">
                 + New Admin
               </button>
             </Link>
@@ -119,7 +118,7 @@ function Advertisements() {
               </div>
             </div>
       
-            <Pie></Pie>
+            {/* <Pie></Pie> */}
           </div>
 
           <div className="bg-white rounded-xl shadow-md p-4 flex flex-col sm:flex-row items-center gap-4">

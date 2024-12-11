@@ -2,35 +2,33 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from '@/components/ui/input';
 import icone from '../../../../../imgs/image (35).png';
+import SubHeader from '@/components/layouts/SubHeader';
 // import Image from 'next/image'; 
 
 export default function Page() {
   return (
     <div className="w-full">
-      <div className="flex items-center space-x-3 mb-8">
-        {/* <Image src={icone} alt="icon" className="w-6 h-6" /> */}
-        <h1 className="text-2xl font-bold">Edit Admin Information</h1>
-      </div>
+      <SubHeader title='Edit Admin Information' />
 
-      <div className=" p-4 w-full">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full mx-auto">
+      <div className="w-full">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full mx-auto">
           <form>
             <div className="grid grid-cols-2 gap-6 mb-5">
               <div>
                 <label htmlFor="adminName" className="text-black">Admin Name</label>
-                <Input id="adminName" className="rounded-lg w-full py-4 mt-2 border border-gray-300" placeholder="Mohamed Omar" />
+                <Input id="adminName" className="rounded-lg w-full py-4 mt-2 " placeholder="Mohamed Omar" />
               </div>
               <div>
                 <label htmlFor="adminRole" className="text-black">Admin Role</label>
-                <Input id="adminRole" className="rounded-lg w-full py-4 mt-2 border border-gray-300" placeholder="System Admin" />
+                <Input id="adminRole" className="rounded-lg w-full py-4 mt-2 " placeholder="System Admin" />
               </div>
               <div>
                 <label htmlFor="adminEmail" className="text-black">Admin Email</label>
-                <Input id="adminEmail" className="rounded-lg w-full py-4 mt-2 border border-gray-300" placeholder="Mo@gmail.com" />
+                <Input id="adminEmail" className="rounded-lg w-full py-4 mt-2 " placeholder="Mo@gmail.com" />
               </div>
               <div>
                 <label htmlFor="adminPassword" className="text-black">Admin Password</label>
-                <Input type="password" id="adminPassword" className="rounded-lg w-full py-4 mt-2 border border-gray-300" placeholder="********" />
+                <Input type="password" id="adminPassword" className="rounded-lg w-full py-4 mt-2 " placeholder="********" />
               </div>
             </div>
 
@@ -50,7 +48,7 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center">
-              <Button variant="outline" className="bg-[#f3b852] text-white py-4 px-12 rounded-lg">
+              <Button variant="outline" className="bg-primary text-white py-4 px-12 rounded-lg">
                Save
               </Button>
             </div>

@@ -36,7 +36,7 @@ const OverviewCard = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {cardsData.map((card, index) => (
-        <Card key={index} className="p4 shadow-lg">
+        <Card key={index} className="p4 shadow-none border-none">
           <CardHeader className="flex flex-row justify-between p-4">
             <div className="space-y-3">
               <h1 className="text-base font-medium text-gray-500">
@@ -45,7 +45,7 @@ const OverviewCard = () => {
               <p className="text-2xl font-bold">{card.value}</p>
             </div>
             <div>
-              <div className="rounded-full p-2 border border-orange-300 text-orange-400">
+              <div className="rounded-full p-2 border border-primary text-primary">
                 {card.icon}
               </div>
             </div>

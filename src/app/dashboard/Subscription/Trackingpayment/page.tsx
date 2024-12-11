@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
+import SubHeader from "@/components/layouts/SubHeader";
 
 const subscriptions = [
   {
@@ -42,30 +43,36 @@ export default function TrackingPayments() {
   );
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-8 flex-col sm:flex-row">
-          <h1 className="text-2xl font-semibold">Tracking Payments</h1>
-
-          <div className="relative w-full sm:w-[140px] lg:w-64">
-            <Input
-              placeholder="Search vendor name"
-              className="pl-10 border-[#eeeeee] bg-white border-2 rounded-full focus:outline-none py-3"
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888]" />
-          </div>
+    <div className="min-h-screen">
+      <SubHeader title="Tracking Payments">
+        <div className="relative w-full sm:w-[140px] lg:w-64">
+          <Input
+            placeholder="Search vendor name"
+            className="pl-10 bg-white border-2 focus:outline-none py-3"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888]" />
         </div>
-
-        <div className="overflow-x-auto bg-white shadow-md rounded-lg">
-          <table className="min-w-full border border-gray-200 text-center">
+      </SubHeader>
+        <div className="overflow-x-auto bg-white rounded-lg">
+          <table className="min-w-full text-center">
             <thead>
-              <tr className="border-b bg-gray-50">
-                <th className="py-2 px-4 font-bold text-gray-700">Membership No.</th>
-                <th className="py-2 px-4 font-bold text-gray-700">Vendor Name</th>
-                <th className="py-2 px-4 font-bold text-gray-700">Subscription Plan</th>
-                <th className="py-2 px-4 font-bold text-gray-700">Date Issued</th>
-                <th className="py-2 px-4 font-bold text-gray-700">Total Amount</th>
+              <tr className="border-b">
+                <th className="py-2 px-4 font-bold text-gray-700">
+                  Membership No.
+                </th>
+                <th className="py-2 px-4 font-bold text-gray-700">
+                  Vendor Name
+                </th>
+                <th className="py-2 px-4 font-bold text-gray-700">
+                  Subscription Plan
+                </th>
+                <th className="py-2 px-4 font-bold text-gray-700">
+                  Date Issued
+                </th>
+                <th className="py-2 px-4 font-bold text-gray-700">
+                  Total Amount
+                </th>
                 <th className="py-2 px-4 font-bold text-gray-700">Status</th>
               </tr>
             </thead>
@@ -94,13 +101,13 @@ export default function TrackingPayments() {
               ))}
             </tbody>
           </table>
-          <div className="flex justify-between items-center py-4 px-6 bg-gray-50">
+          <div className="flex justify-between items-center py-4 px-6 ">
             <span className="text-gray-600">Showing 10 from 46 data</span>
             <div className="flex gap-2">
               {[1, 2, 3].map((page) => (
                 <button
                   key={page}
-                  className="px-3 py-1 border rounded-full hover:bg-orange-400 hover:text-white transition"
+                  className="px-3 py-1 border rounded-full hover:bg-primary hover:text-white transition"
                 >
                   {page}
                 </button>
@@ -108,7 +115,6 @@ export default function TrackingPayments() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
