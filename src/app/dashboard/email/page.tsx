@@ -1,10 +1,8 @@
-import ActiveSubscriptions from "@/components/charts/ActiveSubscriptions";
 import Revenue from "@/components/charts/Revenue";
 import SubHeader from "@/components/layouts/SubHeader";
-import OverviewCard from "@/components/template/OverviewCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { PenLine, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import React from "react";
 const folders = [
   { icon: "📥", label: "Inbox", count: 1253 },
@@ -48,7 +46,7 @@ export default function page() {
             <Revenue />
           </div>
           <div className="col-span-2">
-            <ActiveSubscriptions />
+            {/* <ActiveSubscriptions data={}/> */}
           </div>
         </section>
       </section>

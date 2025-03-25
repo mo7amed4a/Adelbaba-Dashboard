@@ -7,8 +7,6 @@ import {
   SidebarGroup,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Gauge } from "lucide-react";
 import Image from "next/image";
@@ -16,6 +14,11 @@ import Link from "next/link";
 import { useState } from "react";
 import GroupLinks, { ItemLink } from "./GroupLinks";
 import { FaHome } from "react-icons/fa";
+
+const managementLinks = [
+  { text: "Admins Management", href: "/dashboard/management/admins" },
+  { text: "Employees Management", href: "/dashboard/management/employees" },
+];
 
 const subscriptionLinks = [
   { text: "Subscription Plans", href: "/dashboard/subscription/plans" },
@@ -32,6 +35,7 @@ const communicationLinks = [
   { text: "Email", href: "/dashboard/communication/email" },
   { text: "Chat", href: "/dashboard/communication/chat" },
 ];
+
 
 export function AppSidebar() {
   const [isCommunicationOpen, setCommunicationOpen] = useState(false); // Added state for communication dropdown
@@ -56,10 +60,10 @@ export function AppSidebar() {
         <SidebarGroup />
         <SidebarMenu>
           <ItemLink href="/dashboard" text="Dashboard" Icon={Gauge} />
-          <ItemLink
-            href="/dashboard/manegment"
+          <GroupLinks
             text="Management"
             Icon={Gauge}
+            links={managementLinks}
           />
           <GroupLinks
             text="Subscriptions"
@@ -73,6 +77,7 @@ export function AppSidebar() {
             links={communicationLinks}
           />
           <ItemLink href="/dashboard/reports" text="Reports" Icon={Gauge} />
+          <ItemLink href="/dashboard/support/tickets" text="Support and Tickets" Icon={Gauge} />
         </SidebarMenu>
         <SidebarGroup />
       </SidebarContent>

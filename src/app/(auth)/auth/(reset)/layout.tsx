@@ -2,11 +2,11 @@ import React from 'react'
 import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card';
 
-const img = "/auth/bg.jpeg";
+const img = "/icons/auth/bg.jpeg";
 
 
 
-export default function layout({
+export default async function layout({
     children,
 }: {
     children: React.ReactNode,
@@ -24,7 +24,7 @@ export default function layout({
           <CardContent className="flex flex-col md:flex-row gap-y-5 gap-x-10 items-center">
             <div className="flex justify-center items-center w-full">
               <Image
-                src="/auth/lock.png"
+                src="/icons/auth/lock.png"
                 className="size-24 md:size-52"
                 width={400}
                 height={400}

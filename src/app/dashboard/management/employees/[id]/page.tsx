@@ -7,27 +7,28 @@ import SubHeader from '@/components/layouts/SubHeader';
 
 export default function Page() {
   return (
-    <div>
-      <SubHeader title='Add New Admin' />
-      <div>
-        <div className="bg-white p-4 rounded-lg w-full mx-auto">
+    <div className="w-full">
+      <SubHeader title='Edit Admin Information' />
+
+      <div className="w-full">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full mx-auto">
           <form>
             <div className="grid grid-cols-2 gap-6 mb-5">
               <div>
                 <label htmlFor="adminName" className="text-black">Admin Name</label>
-                <Input id="adminName" className="rounded-lg w-full py-4 mt-2" placeholder="Mohamed Omar" />
+                <Input id="adminName" className="rounded-lg w-full py-4 mt-2 " placeholder="Mohamed Omar" />
               </div>
               <div>
                 <label htmlFor="adminRole" className="text-black">Admin Role</label>
-                <Input id="adminRole" className="rounded-lg w-full py-4 mt-2" placeholder="System Admin" />
+                <Input id="adminRole" className="rounded-lg w-full py-4 mt-2 " placeholder="System Admin" />
               </div>
               <div>
                 <label htmlFor="adminEmail" className="text-black">Admin Email</label>
-                <Input id="adminEmail" className="rounded-lg w-full py-4 mt-2" placeholder="Mo@gmail.com" />
+                <Input id="adminEmail" className="rounded-lg w-full py-4 mt-2 " placeholder="Mo@gmail.com" />
               </div>
               <div>
                 <label htmlFor="adminPassword" className="text-black">Admin Password</label>
-                <Input type="password" id="adminPassword" className="rounded-lg w-full py-4 mt-2" placeholder="********" />
+                <Input type="password" id="adminPassword" className="rounded-lg w-full py-4 mt-2 " placeholder="********" />
               </div>
             </div>
 

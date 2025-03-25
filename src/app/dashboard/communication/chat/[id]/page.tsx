@@ -3,8 +3,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Send, Users } from "lucide-react";
-import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
+import { Send } from "lucide-react";
+import { useState, useRef, useEffect, use} from "react";
 import OpenMenu from "./_components/openMenu";
 
 interface Message {
@@ -17,8 +17,9 @@ interface Message {
 export default function ChatPage({
   params
 }: {
-    params: {id : string}
+    params: Promise<{id : string}>
 }) {
+  const {id} = use(params);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -152,7 +153,7 @@ export default function ChatPage({
           </Avatar>
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold">Mohamed {params.id}</h2>
+              <h2 className="text-sm font-semibold">Mohamed {id}</h2>
             </div>
             {/* <span className="text-xs text-muted-foreground">04-05-2024</span> */}
           </div>

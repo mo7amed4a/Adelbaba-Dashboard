@@ -56,7 +56,7 @@ const RichEditorEmail = () => {
         editor={editor}
       />
       <div className="button-group flex gap-2">
-        <Button
+        <Button 
           size="xs"
           variant={"outline"}
           className={"py-1 "+ editor.isActive("textStyle") ? "bg-primary" : "bg-gray-50"}
